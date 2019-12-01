@@ -5,8 +5,12 @@ class Helpers
     @user
   end
 
-  def is_logged_in?
-
+  def is_logged_in?(session)
+    if session[:user_id]
+      return true
+    else
+      return false
+    end
   end
 
 end
