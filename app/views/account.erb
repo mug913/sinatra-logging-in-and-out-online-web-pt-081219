@@ -9,6 +9,9 @@
 <% if Helpers.is_logged_in?(session) %>
     Welcome <%=@user.username%></br>
     Balance: <%=@user.balance%></br>
+    <form type='POST' action='/logout'>
+    <input type='submit' id='submit' value='Log Out'>
+    </form>
 <%else%>
   <a href="/">Log In</a>
 <%end%>
